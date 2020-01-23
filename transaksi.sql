@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Nov 24, 2019 at 09:35 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `transaksi2`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_pengguna` int(11) DEFAULT NULL,
+  `nomor_akun_virtual` varchar(50) DEFAULT NULL,
+  `id_film` int(11) DEFAULT NULL,
+  `jadwal_film` datetime DEFAULT NULL,
+  `kursi_pesanan` int(2) DEFAULT NULL,
+  `waktu_transaksi` datetime DEFAULT current_timestamp(),
+  `status_transaksi` varchar(50) DEFAULT 'PENDING',
+  `id_transaksi` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_pengguna`, `nomor_akun_virtual`, `id_film`, `jadwal_film`, `kursi_pesanan`, `waktu_transaksi`, `status_transaksi`, `id_transaksi`) VALUES
+(1, '67068566614815817', 330457, '2019-06-24 00:00:00', '22', '2019-10-12 00:00:00', 'PENDING', 1),
+(2, '4508472010381200', 640882, '2019-10-19 00:00:00', '12', '2019-01-16 00:00:00', 'PENDING', 2),
+(3, '3580469150312337', 330457, '2019-08-21 00:00:00', '22', '2019-03-19 00:00:00', 'PENDING', 3),
+(4, '201785311133899', 330457, '2019-02-24 00:00:00', '23', '2019-03-12 00:00:00', 'PENDING', 4),
+(5, '5893736254474243323', 640882, '2019-10-08 00:00:00', '18', '2019-09-26 00:00:00', 'PENDING', 5),
+(6, '3528358345079106', 330457, '2019-10-20 00:00:00', '15', '2019-09-13 00:00:00', 'PENDING', 6),
+(7, '5007662841937294', 640882, '2019-10-03 00:00:00', '14', '2019-06-30 00:00:00', 'PENDING', 7),
+(8, '3542885131327374', 640882, '2019-10-04 00:00:00', '19', '2019-07-07 00:00:00', 'PENDING', 8),
+(9, '3554676740371795', 330457, '2019-03-03 00:00:00', '23', '2018-12-20 00:00:00', 'PENDING', 9),
+(10, '337941650072555', 330457, '2019-09-12 00:00:00', '30', '2019-07-21 00:00:00', 'PENDING', 10),
+(11, '3547452041057388', 640882, '2019-01-08 00:00:00', '20', '2019-10-30 00:00:00', 'PENDING', 11),
+(12, '5038814711900281', 330457, '2019-09-01 00:00:00', '27', '2019-10-10 00:00:00', 'PENDING', 12),
+(13, '374288657135025', 330457, '2019-09-27 00:00:00', '21', '2019-02-26 00:00:00', 'PENDING', 13),
+(14, '6333449603597441350', 330457, '2019-07-22 00:00:00', '10', '2019-07-29 00:00:00', 'PENDING', 14),
+(15, '3547578644961426', 330457, '2019-11-05 00:00:00', '06', '2019-02-05 00:00:00', 'PENDING', 15),
+(16, '3565357091150172', 330457, '2019-09-23 00:00:00', '07', '2019-10-10 00:00:00', 'PENDING', 16),
+(17, '6391030732271128', 640882, '2019-01-06 00:00:00', '04', '2018-12-26 00:00:00', 'PENDING', 17),
+(18, '3538822273436172', 640882, '2019-01-13 00:00:00', '08', '2019-03-12 00:00:00', 'PENDING', 18),
+(19, '06044706013267569', 640882, '2019-11-02 00:00:00', '15', '2019-04-21 00:00:00', 'PENDING', 19),
+(20, '5288806327190254', 330457, '2019-09-16 00:00:00', '10', '2019-02-28 00:00:00', 'PENDING', 20),
+(21, '67068566614815818', 640882, '2019-06-24 00:00:00', '10', '2019-10-12 00:00:00', 'PENDING', 21),
+(21, '67068566614815818', 640882, '2019-06-24 00:00:00', '10', '2019-10-12 00:00:00', 'PENDING', 22);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_transaksi`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
